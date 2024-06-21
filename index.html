@@ -1,4 +1,34 @@
-<!DOCTYPE HTML>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
-<iframe src="https://q8doeua1829.dueial.com/browser/" width="100%" height="2000px"></iframe>
+ <head>
+  <title>baidu.com</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <script>
+
+    function parseQueryString(url) {
+        var result = {};
+        var str = url.split("?")[1];
+        if (str == undefined)
+            return result;
+        var items = str.split("&")
+
+        var arr;
+        for (var i = 0; i < items.length; i++) {
+            arr = items[i].split("=");
+            result[arr[0]] = arr[1];
+        }
+        return result;
+    };
+
+  function cc(){
+      var params = parseQueryString(window.location.href);
+      var i = params.i;
+      document.getElementById("reportFrame").src = "https://q8doeua1829.dueial.com/browser/?i="+i;
+   }
+    
+</script>
+ </head>
+ <body onload="cc();">
+ <iframe id="reportFrame" width="100%" height="100%" src=""></iframe>
+ </body>
 </html>
